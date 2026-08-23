@@ -9,6 +9,8 @@ import type { ColorScheme } from "../lib/themes"
 
 export type DisplayMode = "default" | "verbose"
 
+export type AppLanguage = "zh-CN" | "en-US"
+
 export interface PersistedModelRef {
 	providerID: string
 	modelID: string
@@ -64,6 +66,9 @@ export const displayModeAtom = atomWithStorage<DisplayMode>("palot:displayMode",
 export const themeAtom = atomWithStorage<string>("palot:theme", "default")
 
 export const colorSchemeAtom = atomWithStorage<ColorScheme>("palot:colorScheme", "dark")
+
+/** The product UI language. Chinese is the default for BoatHarness. */
+export const languageAtom = atomWithStorage<AppLanguage>("boatharness:language:v1", "zh-CN")
 
 /**
  * Whether the user prefers opaque (non-transparent) windows.

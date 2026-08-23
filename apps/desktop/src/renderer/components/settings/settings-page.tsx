@@ -18,6 +18,7 @@ import {
 	WrenchIcon,
 } from "lucide-react"
 import { useEffect } from "react"
+import { useI18n } from "../../lib/i18n"
 import { useSetSidebarSlot } from "../sidebar-slot-context"
 
 // ============================================================
@@ -73,6 +74,7 @@ export function SettingsPage() {
 // ============================================================
 
 function SettingsSidebarContent() {
+	const { t } = useI18n()
 	const navigate = useNavigate()
 	const pathname = useRouterState({ select: (s) => s.location.pathname })
 
@@ -90,7 +92,7 @@ function SettingsSidebarContent() {
 							className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
 						>
 							<ArrowLeftIcon aria-hidden="true" className="size-4" />
-							Back to app
+							{t("Back to app")}
 						</button>
 					</div>
 					<SidebarMenu>
@@ -101,10 +103,10 @@ function SettingsSidebarContent() {
 									<SidebarMenuButton
 										isActive={activeTab === tab.id}
 										onClick={() => navigate({ to: `/settings/${tab.id}` })}
-										tooltip={tab.label}
+										tooltip={t(tab.label)}
 									>
 										<Icon aria-hidden="true" className="size-4" />
-										<span>{tab.label}</span>
+										<span>{t(tab.label)}</span>
 									</SidebarMenuButton>
 								</SidebarMenuItem>
 							)

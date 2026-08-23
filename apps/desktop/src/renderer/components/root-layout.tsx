@@ -20,6 +20,7 @@ import { useServerSettingsSync } from "../hooks/use-servers"
 import { useSystemAccentColor } from "../hooks/use-system-accent-color"
 import { useThemeEffect } from "../hooks/use-theme"
 import { useWaitingIndicator } from "../hooks/use-waiting-indicator"
+import { StaticTextLocalizer } from "../lib/i18n"
 import { AppBarProvider } from "./app-bar-context"
 import { CommandPalette } from "./command-palette"
 import { OnboardingOverlay } from "./onboarding/onboarding-overlay"
@@ -183,6 +184,7 @@ export function RootLayout() {
 
 	return (
 		<TooltipProvider>
+			<StaticTextLocalizer />
 			<AppBarProvider>
 				<SidebarSlotProvider>
 					<div
