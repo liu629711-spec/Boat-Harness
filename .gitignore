@@ -16,10 +16,12 @@ src-tauri/target/
 # Electron Builder
 release/
 
-# Environment
+# Environment and local credential scratch files
 .env
 .env.local
 .env.*.local
+pro.txt
+NUL
 
 # IDE
 .vscode/
