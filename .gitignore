@@ -6,8 +6,9 @@ dist/
 .next/
 out/
 
-# Turborepo
+# Turborepo and TypeScript incremental state
 .turbo/
+*.tsbuildinfo
 
 # Tauri
 src-tauri/target/
@@ -45,9 +46,18 @@ AGENTS.local.md
 # Git worktrees
 .worktrees/
 
-# Local working directory
+# Local agent and working state
 .local/
+.zcode/
+.inscode/
+
 # BoatHarness -- local-only / reference material (not committed)
 references/
 vision-mcp/
 *.traineddata
+
+# AgentCore sidecar -- machine-specific runtime and generated code indexes
+.agentcore-runtime/
+/AgentCore/
+/apps/desktop/AgentCore/
+/reference-project/AgentCore-master/
