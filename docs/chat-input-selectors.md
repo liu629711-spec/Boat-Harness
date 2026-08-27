@@ -1,3 +1,10 @@
+---
+title: Chat input selector implementation reference
+status: current
+last_verified: 2026-08-27
+authority: implementation-reference
+---
+
 # ChatInput Selectors: Agent, Model & Variant Preferences
 
 How the prompt toolbar selectors in ChatView work, how preferences are stored and loaded, and how defaults are resolved.

@@ -1,3 +1,10 @@
+---
+title: Worktree implementation reference
+status: current
+last_verified: 2026-08-27
+authority: implementation-reference
+---
+
 # Worktrees: Isolated Agent Sessions
 
 How Palot creates and manages git worktrees for agent sessions, the OpenCode API integration, and the apply-to-local / commit-and-push workflows.
