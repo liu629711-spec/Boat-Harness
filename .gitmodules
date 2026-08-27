@@ -1,0 +1,4 @@
+[submodule "AgentCore"]
+	path = reference-project/AgentCore
+	url = https://github.com/Lawofall/AgentCore.git
+	branch = master

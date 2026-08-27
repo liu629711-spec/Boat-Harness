@@ -1,39 +1,42 @@
 ---
 title: AgentCore reference manifest
-status: pending-provenance
+status: pinned
 last_updated: 2026-08-27
 authority: reference-manifest
 ---
 
 # AgentCore reference manifest
 
-## Intended reference
+## Pinned reference
 
-- Upstream URL: `https://github.com/Lawofall/AgentCore.git`
-- BoatHarness path: `reference-project/AgentCore`
-- Management: Git submodule pinned to one exact commit
-- Local modifications: prohibited without explicit authorization
+- **Commit SHA**: `2ef9ad4c2109a122cdd3d3d0f27eb468b205360e`
+- **Commit date**: 2026-08-22 09:45:05 +0800
+- **Git tree SHA**: `148beb9145c266739555a989b09133ab9cef7db9`
+- **Upstream tags**: `desktop-v0.9.11`, `prod-2ef9ad4c2`
+- **Upstream URL**: `https://github.com/Lawofall/AgentCore.git`
+- **BoatHarness path**: `reference-project/AgentCore`
+- **Management**: Git submodule
+- **License**: MIT License, Copyright (c) 2026 Lawofall (`LICENSE`)
+- **Local modifications**: prohibited without explicit authorization
 
-## Current state
+## Provenance verification
 
-The pre-governance snapshot at `reference-project/AgentCore-master` advertises the upstream URL but its
-nested Git metadata has no valid `HEAD`. A local recovery manifest hashed 17,707 non-`.git` files before
-conversion. The snapshot remains ignored and intact until an exact upstream revision is proven by
-file-level comparison.
+The pre-governance snapshot at `reference-project/AgentCore-master/` was proven to exactly match the
+pinned commit via full blob-by-blob comparison using a local upstream mirror. All 7,403 tracked files
+matched after normalizing for `.gitattributes` (CRLF conversion on `gradlew.bat`). The snapshot
+contained 10,304 additional files (`.venv/`, `__pycache__/`, etc.) that are all properly ignored by
+upstream `.gitignore` and do not affect tracked content.
 
-The reference SHA, Git tree, license path, comparison method, and submodule status are intentionally not
-filled with guessed values. Until this manifest changes to `status: pinned`, AgentCore provenance is a
-G0 blocker and the snapshot cannot authorize implementation as a reproducible source revision.
+**Comparison method**: Full file hash comparison via temporary Git index against upstream mirror at
+`D:\BoatHarness\.local\AgentCore-upstream.git`, with CRLF normalization per `.gitattributes`.
 
-## Required pin record
+**Verification date**: 2026-08-27
 
-A completed manifest must record:
+## Submodule status
 
-- exact commit SHA and commit date;
-- Git tree SHA;
-- upstream remote URL;
-- license identifier and path;
-- snapshot-to-upstream comparison method and any excluded generated files;
-- `.gitmodules` path and URL;
-- `git submodule status` output;
-- confirmation that the submodule worktree has no local modifications.
+```
+$ git submodule status
+ 2ef9ad4c2109a122cdd3d3d0f27eb468b205360e reference-project/AgentCore (desktop-v0.8.0-86-g2ef9ad4c)
+```
+
+Submodule worktree is clean with no local modifications.
